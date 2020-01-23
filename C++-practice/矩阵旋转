@@ -1,4 +1,3 @@
-```C++
 #include <iostream>
 using namespace std;
 //矩阵顺时针旋转90度
