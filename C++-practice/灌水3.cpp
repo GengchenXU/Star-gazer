@@ -5,7 +5,7 @@ int main(){
     int n = 0, m = 0;
     int res[1005][12] = {0}; //N<= 1000, M<= 10, with 0 means sum
     int volume[12] = {0};
-    int min, min_num, index;    //×îÐ¡ÊýÁ¿£¬×îÐ¡ÊýÁ¿¶ÔÓ¦Ç°Ò»¸öÊý£¬×îÐ¡ÊýÁ¿¶ÔÓ¦Ë®Í°ID
+    int min, min_num, index;    //æœ€å°æ•°é‡ï¼Œæœ€å°æ•°é‡å¯¹åº”å‰ä¸€ä¸ªæ•°ï¼Œæœ€å°æ•°é‡å¯¹åº”æ°´æ¡¶ID
 
     cin >> n >> m;
     for(int i = 1; i <= m; i++)
@@ -29,7 +29,7 @@ int main(){
 
         res[cur][0] = min;
         for(int i = 1; i <= m; i++)
-            res[cur][i] = res[min_num][i];  //¸´ÖÆÊý×é
+            res[cur][i] = res[min_num][i];  //å¤åˆ¶æ•°ç»„
             res[cur][index] += 1;
     }
 
