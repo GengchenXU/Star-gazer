@@ -1,8 +1,14 @@
+/*
+ * @Description: 
+ * @Autor: GengchenXu
+ * @Date: 2020-03-10 22:22:46
+ * @LastEditTime: 2020-03-26 22:38:34
+ */
 #include <iostream>
 using namespace std;
 //矩阵顺时针旋转90度
 void Rotation(int arr[100][100] ,int m,int n){ 
-int tmp[n][m];//局部变量，函数调用完后会自动释放 
+int tmp[100][100];//局部变量，函数调用完后会自动释放 
 int dst=m-1;   //这里我们从目标矩阵的最后一列开始存放数据
 //顺时针旋转矩阵90度 
 for(int i=0;i<m;i++,dst--)  
@@ -37,4 +43,4 @@ int main()
 	 		
 	 	return 0;
 	 }
-```
+
