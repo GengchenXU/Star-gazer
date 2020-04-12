@@ -1,9 +1,4 @@
-/*
- * @Description: 
- * @Autor: GengchenXu
- * @Date: 2020-04-11 14:12:39
- * @LastEditTime: 2020-04-11 15:17:06
- */
+
 #include <iostream>
 #include <string>
 #include <cstdlib>
