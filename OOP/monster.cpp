@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: GengchenXu
  * @Date: 2020-04-14 15:08:37
- * @LastEditTime: 2020-04-15 18:41:16
+ * @LastEditTime: 2020-04-17 22:11:36
  */
 #include<cstring>
 #include<iostream>
@@ -76,7 +76,7 @@ int main(){
         cin >> tep;
         base red(2, 3, 4, 1, 0, tep, "red"), blue(3, 0, 1, 2, 4, tep, "blue");//出战顺序和生命值
         base::set();
-        base::grow(red, blue);
+        base::grow(blue, red);
     }
     return 0;
 }
