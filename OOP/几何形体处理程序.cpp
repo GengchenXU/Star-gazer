@@ -2,13 +2,14 @@
  * @Description: 
  * @Autor: GengchenXu
  * @Date: 2020-04-21 15:03:03
- * @LastEditTime: 2020-04-21 15:16:54
+ * @LastEditTime: 2020-04-22 23:27:07
  */
 #include<iostream>
 #include<cstdio>
 #include<cmath>//sqrt头文件
 #include<cstdlib>//qsort头文件
 #include<algorithm>//sort头文件
+#define PI 3.1415926535
 using namespace std;
 
 class Shape
@@ -54,7 +55,6 @@ void Triangle::Print()
 class Circle:public Shape
 {
 public:
-    #define PI 3.1415926535
     double random;
 public:
     virtual double Area();
@@ -88,7 +88,7 @@ int compare(const void *s1,const void *s2)//自定义比较函数
 }
 bool cmp(Shape *a,Shape *b)
 {
-    return a->Area()<b->Area();
+    return a->Area()>b->Area();
 }//sort函数排序规则；
 
 int main()
@@ -127,7 +127,9 @@ int main()
     }
     cout<<"accomplish\n";
     qsort(p_shape,n,sizeof(Shape *),compare);
-    //sort(p_shape,p_shape+n,cmp);
+    for(int i=0;i<n;i++)
+        p_shape[i]->Print();
+    sort(p_shape,p_shape+n,cmp);
     for(int i=0;i<n;i++)
         p_shape[i]->Print();
     for(int i=0;i<n;i++)
