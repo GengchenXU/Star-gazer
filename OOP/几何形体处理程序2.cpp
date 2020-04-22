@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: GengchenXu
  * @Date: 2020-04-22 21:56:37
- * @LastEditTime: 2020-04-22 23:05:40
+ * @LastEditTime: 2020-04-22 23:21:51
  */
 #include<iostream>
 #include<stdlib.h>
@@ -59,7 +59,7 @@ void CTriangle::PrintInfo(){
     CShape * pShapes[100]; 
 }
 double CHexagonal::Area(){
-    CTriangle*ct=new CTriangle();
+    CTriangle*ct=new CTriangle;
     ct->a=w;
     ct->b=w;
     ct->c=w;
@@ -85,31 +85,31 @@ int main(){
         cin >>c;
         switch (c){
             case 'R':
-            pr=new CRectangle();
+            pr=new CRectangle;
             cin>>pr->w>>pr->h; 
             pShapes[i]=pr; 
             break; 
             case 'C': 
-            pc=new CCircle();
+            pc=new CCircle;
             cin>>pc->r; 
             pShapes[i]=pc;
             break; 
             case 'T': 
-            pt=new CTriangle();
+            pt=new CTriangle;
             cin >>pt->a >>pt->b>>pt->c; 
             pShapes[i]=pt; 
             break;
             case 'H':
-            ph=new CHexagonal();
+            ph=new CHexagonal;
             cin>> ph->w;
             pShapes[i]=ph;
             break;
         }
     }
     qsort(pShapes,n, sizeof(CShape*),MyCompare); 
-    for(i=0;i<n;i++)
+    for(i=0;i<n;i++)//按面积大小输出
         pShapes[i]->PrintInfo();
-        return 0;
+    return 0;
 }
 int MyCompare(const void*s1,const void*s2){
     double a1,a2;
@@ -122,7 +122,7 @@ int MyCompare(const void*s1,const void*s2){
     if(a1<a2)
         return -1;
     else if(a2<a1)
-    return 1;
+        return 1;
     else
         return 0;
 }
