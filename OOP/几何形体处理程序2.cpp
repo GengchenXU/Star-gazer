@@ -2,11 +2,12 @@
  * @Description: 
  * @Autor: GengchenXu
  * @Date: 2020-04-22 21:56:37
- * @LastEditTime: 2020-04-22 22:22:44
+ * @LastEditTime: 2020-04-22 23:05:40
  */
 #include<iostream>
 #include<stdlib.h>
 #include<math.h>
+#define pi 3.1415926535
 using namespace std;
 class CShape{
 public:
@@ -31,6 +32,12 @@ public:
     virtual double Area(); 
     virtual void PrintInfo();
 };
+class CHexagonal:public CShape {
+public:
+    int w;
+    virtual double Area();
+    virtual void PrintInfo();
+};
 double CRectangle::Area(){
     return w*h;
 }
@@ -38,7 +45,7 @@ void CRectangle:: PrintInfo(){
     cout<<"Rectangle:"<<Area()<<endl;
 };
 double CCircle:: Area(){
-    return 3.14*r*r;
+    return pi*r*r;
 } 
 void CCircle:: PrintInfo(){
     cout<<"Circle:"<<Area()<<endl;
@@ -51,18 +58,12 @@ void CTriangle::PrintInfo(){
     cout<<"Triangle:"<<Area()<<endl; 
     CShape * pShapes[100]; 
 }
-class CHexagonal:public CShape {
-public:
-    int w;
-    virtual double Area();
-    virtual void PrintInfo();
-};
 double CHexagonal::Area(){
     CTriangle*ct=new CTriangle();
     ct->a=w;
     ct->b=w;
     ct->c=w;
-    double p=ct->Area()*6;
+    double p=(ct->Area())*6;
     delete ct;
     return p;
 }
@@ -77,6 +78,7 @@ int main(){
     CRectangle * pr;
     CCircle * pc;
     CTriangle * pt;
+    CHexagonal * ph;
     cin>>n; 
     for(i=0;i<n;i++){
         char c;
@@ -96,6 +98,11 @@ int main(){
             pt=new CTriangle();
             cin >>pt->a >>pt->b>>pt->c; 
             pShapes[i]=pt; 
+            break;
+            case 'H':
+            ph=new CHexagonal();
+            cin>> ph->w;
+            pShapes[i]=ph;
             break;
         }
     }
