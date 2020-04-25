@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: GengchenXu
  * @Date: 2020-04-15 19:16:49
- * @LastEditTime: 2020-04-15 19:17:08
+ * @LastEditTime: 2020-04-25 14:09:48
  */
 #include <cstdlib>
 #include <iostream>
@@ -17,8 +17,8 @@ public:
 	MyString(const MyString &A):string(A){}       
 	MyString(const char * A):string(A){}
 	MyString(const string & A):string(A){}    
-	MyString operator()(int n, int m){
-		return substr(n,m);
+	MyString operator()(int start, int end){
+		return substr(start,end);
     }
 };
 
