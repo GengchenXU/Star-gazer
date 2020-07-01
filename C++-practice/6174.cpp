@@ -1,7 +1,15 @@
+/*
+ * @Description: 
+ * @Sample Intput: 
+ * @Output: 
+ * @Autor: GengchenXu
+ * @Date: 2020-03-10 22:25:44
+ * @LastEditTime: 2020-07-01 21:56:42
+ */ 
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
-void paixu(int *num);
+void mysort(int *num);
 int maxnum(int *num);
 int minnum(int *num);
 int main()
@@ -12,21 +20,21 @@ int main()
     scanf("%d",&number);
     for(i=0;i<4;i++)
         num[i]=(int)(number/pow(10.0,(double)i))%10;
-           paixu(num);
+        mysort(num);
     number=maxnum(num)-minnum(num);
     printf("%d-%d=%d\n",maxnum(num),minnum(num),number);
     while(number!=6174)
     {
         for(i=0;i<4;i++)
             num[i]=(int)(number/pow(10.0,(double)i))%10;
-        paixu(num);
+        mysort(num);
         number=maxnum(num)-minnum(num);
         printf("%d-%d=%d\n",maxnum(num),minnum(num),number);
         t++;
     }
     printf("%d",t);
 }
-void paixu(int *num)
+void mysort(int *num)
 {
     int i,j,temp;
     for(i=0;i<4;i++)
