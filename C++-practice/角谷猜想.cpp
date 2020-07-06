@@ -5,7 +5,7 @@ int c(int a){
 		cout<<"End";
 		return 0;
 	}
-           else {
+    else {
 		if (a % 2 == 0) {
 			cout << a << '/' << 2 << '=' << a / 2 << endl;
 			a = a / 2;
@@ -16,8 +16,8 @@ int c(int a){
 			cout << a << "*3+1=" << a * 3 + 1 << endl;			            a = a * 3 + 1;
 			c(a);
 			return 0;}
-	   }
-	   }	
+	}
+}	
 int main(){
 	int a;
 	cin>>a;
