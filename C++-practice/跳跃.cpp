@@ -1,11 +1,4 @@
-/*
- * @Description: 
- * @Sample Intput: 
- * @Output: 
- * @Author: GengchenXu
- * @Date: 2020-03-10 22:22:46
- * @LastEditTime: 2020-08-14 19:41:24
- */
+
 #include<iostream>
 using namespace std;
 int main()
@@ -16,8 +9,7 @@ int main()
 	for (int i=0;i<n;i++){
 		cin >>a[i];
 	}
-	int *p=&a[0];
-	
+	int *p=&a[0];	
 /*	while(k<n&&k>=0&&sum<20) {
 		cout<<k<<" "<<a[k]<<endl;
 		sum++;
