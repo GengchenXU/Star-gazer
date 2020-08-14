@@ -1,7 +1,6 @@
 #include<cstdio>
 #include<string>
 #include<cstring>
-
 using namespace std;
 
 int ans_flag=1,len_1,len_2;
