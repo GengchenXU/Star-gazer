@@ -1,3 +1,12 @@
+/*
+ * @Description: 
+ * @Sample Intput: 
+ * @Output: 
+ * @Author: GengchenXu
+ * @Date: 2020-08-14 19:47:02
+ * @LastEditTime: 2020-08-14 19:49:33
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
