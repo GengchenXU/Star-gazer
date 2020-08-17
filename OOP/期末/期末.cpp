@@ -4,7 +4,7 @@
  * @Output: 
  * @Author: GengchenXu
  * @CreateDate: 
- * @LastEditTime: 2020-08-17 20:13:21
+ * @LastEditTime: 2020-08-17 21:14:39
  */
 #include <iostream>
 using namespace std;
@@ -46,7 +46,6 @@ public:
     bool operator>(const CShape& CBase){
         return this->Getperimeter() > CBase.Getperimeter();
     }
-
 };
 
 class CCircle:public CShape{
@@ -62,7 +61,6 @@ public:
     bool operator>(const CShape& CBase){
         return this->Getperimeter() > CBase.Getperimeter();
     }
-
 };
 
 int main(){
