@@ -1,9 +1,12 @@
 /*
  * @Description: 
- * @Autor: GengchenXu
- * @Date: 2020-04-22 21:56:37
- * @LastEditTime: 2020-04-22 23:21:51
+ * @Sample Intput: 
+ * @Output: 
+ * @Author: GengchenXu
+ * @CreateDate: 
+ * @LastEditTime: 2020-08-17 20:05:34
  */
+
 #include<iostream>
 #include<stdlib.h>
 #include<math.h>
