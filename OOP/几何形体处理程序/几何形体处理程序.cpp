@@ -1,9 +1,12 @@
 /*
  * @Description: 
- * @Autor: GengchenXu
- * @Date: 2020-04-21 15:03:03
- * @LastEditTime: 2020-04-22 23:27:07
+ * @Sample Intput: 
+ * @Output: 
+ * @Author: GengchenXu
+ * @CreateDate: 
+ * @LastEditTime: 2020-08-17 20:12:36
  */
+
 #include<iostream>
 #include<cstdio>
 #include<cmath>//sqrt头文件
