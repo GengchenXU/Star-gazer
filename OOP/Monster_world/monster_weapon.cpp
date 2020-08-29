@@ -22,7 +22,7 @@ It has a bomb
 004 blue headquarter stops making warriors
  * @Autor: GengchenXu
  * @Date: 2020-04-30 23:30:21
- * @LastEditTime: 2020-05-01 00:02:58
+ * @LastEditTime: 2020-08-29 15:23:25
  */
 
 #include<iostream>
@@ -109,7 +109,6 @@ public:
     base(int, int, int, int, int, int, const char*);
     void product();
     static void grow(base, base);
-    void setname();
     void mon_product(int , int);
 };
 
