@@ -10,10 +10,6 @@ int main(){
     cin >> n >> m;
     for(int i = 1; i <= m; i++)
         cin >> volume[i];
-    // cout << "volume ";
-    // for(int i = 1; i <= m; i++)
-    //     cout << volume[i];
-    // cout << endl;
     
     for(int cur = 1; cur <= n; cur++){
         min = n;

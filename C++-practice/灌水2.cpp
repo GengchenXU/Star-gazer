@@ -1,3 +1,11 @@
+/*
+ * @Description: 
+ * @Sample Intput: 
+ * @Output: 
+ * @Author: GengchenXu
+ * @CreateDate: 2020-03-10 22:22:46
+ * @LastEditTime: 2020-08-31 22:06:12
+ */
 #include<Stdio.h>
 #define N 10 
 int main(void)
