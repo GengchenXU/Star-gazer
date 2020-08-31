@@ -4,7 +4,7 @@
  * @Output: 
  * @Author: GengchenXu
  * @CreateDate: 2020-03-10 22:22:46
- * @LastEditTime: 2020-08-31 23:20:02
+ * @LastEditTime: 2020-08-31 23:58:07
  */
 #include <stdio.h>
 int main() {
@@ -24,12 +24,13 @@ int main() {
 		if(i==0) sum[i]=0;
 		else{
 			for(j=0;j<n;j++){
-				if(i-v[j]>=0&&sum[i]>sum[i-v[j]]){
+				int last = i-v[j];
+				if(last>=0&&sum[i]>sum[last]){
 					//sum[i]=sum[i-v[j]];
 					for(p=0;p<n;p++)
-						num[i][p]=num[i-v[j]][p];
-					num[i][j]++;
-					sum[i]=sum[i-v[j]]+1;
+						num[i][p]=num[last][p];
+					num[i][j]++;//当剩余水大于0，这个桶数可以增加
+					sum[i]=sum[last]+1;
 				}
 			}
 		}
