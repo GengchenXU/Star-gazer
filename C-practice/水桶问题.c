@@ -1,63 +1,35 @@
 #include <stdio.h>
-
-int main()
-{
-	int pool = 0,m = 0,temp;
-	//printf("请输入水池容积和桶的数量（空格分开）：");
-	scanf("%d %d",&pool,&m);//读入水桶个数和水池容积 
-	
-	int ton[m],cnt = 0,result[m];
-	//printf("输入每桶水的容积（空格分开）：");
-	for(cnt = 0; cnt<m; cnt++)//读入每桶水的容积 
-		scanf("%d",&ton[cnt]);
-		
-	
-	int dnt = 0;
-	for(cnt = 0; cnt<m; cnt++)//排序,从大到小 
-	{
-		for(dnt = cnt; dnt<m; dnt++)
-		{
-			/*if(ton[cnt] < ton[dnt])
-			{
-				ton[cnt] = ton[cnt] + ton[dnt];//7 = 3 + 4
-				ton[dnt] = ton[cnt] - ton[dnt];//3 = 7 - 4
-				ton[cnt] = ton[cnt] - ton[dnt];//4 = 7 - 3
-			}*/
-			if(ton[cnt] < ton[dnt])
-			{
-				temp=ton[cnt];
-				ton [cnt]=ton[dnt];
-				ton[dnt]=temp;
+int main() {
+	int V,n,i,j,p;
+	scanf("%d %d",&V,&n);
+	int v[n],num[V+1][n],sum[V];
+	for(i=0;i<=V;i++){
+		sum[i]=10000;
+	    for(j=0;j<n;j++)
+		    num[i][j]=0;
+	}
+	for(i=0;i<n;i++)
+	    scanf("%d",&v[i]);
+	for(i=0;i<=V;i++){
+		if(i==0) sum[i]=0;
+		else{
+			for(j=0;j<n;j++){
+				if(i-v[j]>=0&&sum[i]>sum[i-v[j]]){
+						sum[i]=sum[i-v[j]];
+						for(p=0;p<n;p++)
+							num[i][p]=num[i-v[j]][p];
+						num[i][j]++;
+						sum[i]=sum[i-v[j]]+1;
+				}
 			}
 		}
 	}
-	
-	for(cnt = 0; cnt<m; cnt++)
-		result[cnt] = 0;
-	
-	for(cnt = 0; cnt<m - 1; cnt++)//计算
-	{
-		if(pool%ton[cnt] == 0)
-		{
-			result[cnt] = pool / ton[cnt];
-			goto END;
-		}	
+	for(i=0;i<n;i++){
+		printf("%d",num[V][i]);
+		if(i!=n-1)
+		    printf(" ");
 	}
-		
-	
-	for(cnt = 0; cnt<m; cnt++)
-	{
-		result[cnt] = pool / ton[cnt];
-		pool%=ton[cnt];
-		
-	}
-
-END:
-	for(cnt = 0; cnt<m; cnt++)
-	//for(cnt=m;cnt>=0;--cnt)
-		//printf("%d的桶需要%d次\n",ton[cnt],result[cnt]);
-		printf("%d ",result[cnt]);
-	
-	return 0; 
+	return 0;
 }
+
 
