@@ -1,39 +1,39 @@
-/*
- * @Description: 
- * @Sample Intput: 
- * @Output: 
- * @Author: GengchenXu
- * @CreateDate: 2020-03-10 22:22:46
- * @LastEditTime: 2020-08-31 22:06:12
- */
-#include<Stdio.h>
-#define N 10 
-int main(void)
-{
-	int i,pool,M,a[N];
-	scanf("%d%d",&pool,&M);
-	for(i=0;i<M;i++)
-	{
-		scanf("%d",&a[i]);
-	}
-	int j;
-	for(i=0;i<M-1;i++)
-	for(j=0;j<M-1-i;j++)
-	{
-		if(a[j]<a[j+1])
-		{
-			a[j]=a[j]^a[j+1];
-			a[j+1]=a[j]^a[j+1];
-			a[j]=a[j]^a[j+1];
-		}
-	}
-	int b[10]={0};
-	for(i=0;i<M;++i)
-	{
-		b[i]=pool/a[i];
-		pool=pool%a[i];
-	}
-	for(i=0;i<M;i++)
-	printf("%d  ",b[i]);
-	return 0;
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n = 0, m = 0;
+    int res[1005][12] = {0}; //N<= 1000, M<= 10, with 0 means sum
+    int volume[12] = {0};
+    int min, min_num, index;    //最小数量，最小数量对应前一个数，最小数量对应水桶ID
+
+    cin >> n >> m;
+    for(int i = 1; i <= m; i++)
+        cin >> volume[i];
+    
+    for(int cur = 1; cur <= n; cur++){
+        min = n;
+        for(int i = 1; i <= m; i++){
+            int last = cur - volume[i];
+            if (last >= 0 && min > res[last][0] + 1)
+            {
+                min = res[last][0] + 1;
+                index = i;
+                min_num = last;
+            }
+        }
+
+        res[cur][0] = min;
+        for(int i = 1; i <= m; i++)
+            res[cur][i] = res[min_num][i];  //复制数组
+            res[cur][index] += 1;
+    }
+
+    //result
+    for(int i = 1; i <= m; i++){
+        cout << res[n][i];
+        if(i != m)
+            cout << ' ';
+    }
+    return 0;
 }
