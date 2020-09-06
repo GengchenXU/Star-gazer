@@ -11,7 +11,7 @@ int main()
 		if(tb>tw){
 		printf("Walk");
 	}
-	 else if(tw>tb){
+	else if(tw>tb){
 		printf("Bike");
 	}
 	else if(tw=tb){
