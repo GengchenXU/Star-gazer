@@ -24,7 +24,7 @@ int main()
 			for(int j=0;j<m;j++)
 				if(r[j]>=max&&e!=0){
 					printf("%03d",t[j]);
-					 cout << fixed << setprecision(1) << r[j] << endl;
+					cout << fixed << setprecision(1) << r[j] << endl;
 
 					e++ ;
 
