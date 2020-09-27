@@ -17,9 +17,9 @@ int walk(char s[][100], int start, int si, int sj, int ti, int tj, int m, int n)
 			if ((s[d[i].x + 1][d[i].y] != '#') && (d[i].x + 1 < m) && (d[i].x + 1 != ti || d[i].y != tj)) {//向下搜索
 				if (flag[d[i].x + 1][d[i].y] == 0) {
 					++num;
-					 d[num].x = d[i].x + 1; 
+					d[num].x = d[i].x + 1; 
 					d[num].y = d[i].y;
-					 flag[d[i].x + 1][d[i].y] = 1;
+					flag[d[i].x + 1][d[i].y] = 1;
 				}
 			}
 			else if (!(d[i].x + 1 != ti || d[i].y != tj)) {//找到了出口
@@ -39,20 +39,20 @@ int walk(char s[][100], int start, int si, int sj, int ti, int tj, int m, int n)
 			if ((s[d[i].x][d[i].y + 1]) != '#' && (d[i].y + 1 < n) && (d[i].x != ti || d[i].y + 1 != tj)) {//向右搜索
 				if (flag[d[i].x][d[i].y + 1] == 0) { 
 				++num; d[num].x = d[i].x;
-				 d[num].y = d[i].y + 1; 
-				 flag[d[i].x][d[i].y + 1] = 1; 
-				 }
+				d[num].y = d[i].y + 1; 
+				flag[d[i].x][d[i].y + 1] = 1; 
+				}
 			}
 			else if (!(d[i].x != ti || d[i].y + 1 != tj)) {//找到了出口
 				return steps;
 			}
 			if ((s[d[i].x][d[i].y - 1] != '#') && (d[i].y - 1 >= 0) && (d[i].x != ti || d[i].y - 1 != tj)) {//向左搜索
 				if (flag[d[i].x][d[i].y - 1] == 0) {
-				 ++num; 
-				 d[num].x = d[i].x;
-				  d[num].y = d[i].y - 1; 
-				  flag[d[i].x][d[i].y - 1] = 1; 
-				  }
+					++num; 
+					d[num].x = d[i].x;
+					d[num].y = d[i].y - 1; 
+					flag[d[i].x][d[i].y - 1] = 1; 
+				}
 			}
 			else if (!(d[i].x != ti || d[i].y - 1 != tj)) {//找到了出口
 				return steps;

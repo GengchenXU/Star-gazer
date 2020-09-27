@@ -11,8 +11,8 @@ int main(){
 if(month==2){
 
 	if(leap==1&&day==29){
-       month+=1;
-       day=1;special=1;
+        month+=1;
+        day=1;special=1;
         }
 	if(leap==0&&day==28){
 		month+=1;
@@ -22,11 +22,11 @@ if(month==2){
 }
 if(0<month<=12){
 	if(month==12&&day==31){
-       year+=1;
-       month=1;
-       day=1;
-       special=1;}
-       if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10) && day == 31) {
+        year+=1;
+        month=1;
+        day=1;
+        special=1;}
+    if ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10) && day == 31) {
 			month += 1;
 			day = 1;
 			special = 1;

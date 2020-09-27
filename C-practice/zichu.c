@@ -4,9 +4,9 @@ int main(){
     scanf("%d",&n);
     for(i=10;i<=n;i++)
     {
-           a=i/10;
-	   b=i%10;
-	  if(i%(a+b)==0) 
+        a=i/10;
+        b=i%10;
+    if(i%(a+b)==0) 
 	  {
 		printf("%d\n",i);
 	  }
