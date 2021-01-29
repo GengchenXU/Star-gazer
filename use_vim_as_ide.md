@@ -1,5 +1,3 @@
-
-
 ## 目录
 ------
 
@@ -76,9 +74,10 @@ vi 之命令禅印于心，
 
 我是个目标驱动的信奉者，本文内容，我会先给出优秀 C/C++ IDE 应具备哪些功能，再去探索如何通过 vim 的操作或插件来达到目标。最终至少要像这个样子：
 
-[![](https://github.com/yangyangwithgnu/use_vim_as_ide/raw/master/pics/%E5%9B%BE%E5%BD%A2%E7%8E%AF%E5%A2%83%E4%B8%8B%20IDE%20%E6%80%BB%E6%8F%BD.png)](https://github.com/yangyangwithgnu/use_vim_as_ide/blob/master/pics/%E5%9B%BE%E5%BD%A2%E7%8E%AF%E5%A2%83%E4%B8%8B%20IDE%20%E6%80%BB%E6%8F%BD.png)  
-（图形环境下 IDE 总揽） [![](https://github.com/yangyangwithgnu/use_vim_as_ide/raw/master/pics/%E7%BA%AF%E5%AD%97%E7%AC%A6%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%80%BB%E8%A7%88.png)](https://github.com/yangyangwithgnu/use_vim_as_ide/blob/master/pics/%E7%BA%AF%E5%AD%97%E7%AC%A6%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%80%BB%E8%A7%88.png)  
+（图形环境下 IDE 总揽） 
+![](https://raw.githubusercontent.com/yangyangwithgnu/use_vim_as_ide/master/pics/%E5%9B%BE%E5%BD%A2%E7%8E%AF%E5%A2%83%E4%B8%8B%20IDE%20%E6%80%BB%E6%8F%BD.png)
 （纯字符模式下 IDE 总揽）
+![](https://raw.githubusercontent.com/yangyangwithgnu/use_vim_as_ide/master/pics/%E7%BA%AF%E5%AD%97%E7%AC%A6%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%80%BB%E8%A7%88.png)
 
 0 vim 必知会
 ---------
