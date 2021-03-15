@@ -13,7 +13,7 @@ typedef struct node{
     /* data */
     char data;
     struct node *next;
-    struct node *front;
+    //struct node *front;
 }linklist, *plist;
 void eliminate();
 void display(linklist *pHead);
@@ -21,17 +21,17 @@ linklist *pHead=(linklist*)malloc(sizeof(linklist));
 linklist *PTail=(linklist*)malloc(sizeof(linklist));
 void createlist(char *a,int len){
     linklist *pt=pHead;
-    PTail->front=pHead;
+    //PTail->front=pHead;
     PTail->next=NULL;
     pHead->next=PTail;
-    pHead->front=NULL;
+    //pHead->front=NULL;
     pHead->data=PTail->data='-';
     for(int i=0;i<len;i++){
         linklist *tmp=(linklist*)malloc(sizeof(linklist));
         tmp->data=a[i];
-        tmp->front=pt;
+        //tmp->front=pt;
         tmp->next=pt->next;
-        pt->next->front=tmp;
+        //pt->next->front=tmp;
         pt->next=tmp;
         pt=tmp;
     }
