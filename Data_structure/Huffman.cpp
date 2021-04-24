@@ -4,7 +4,7 @@
  * @Output: 
  * @Author: GengchenXu
  * @CreateDate: 2021-04-20 23:06:33
- * @LastEditTime: 2021-04-21 20:35:17
+ * @LastEditTime: 2021-04-24 23:35:34
  */
 #include<stdlib.h>
 #include<iostream>
@@ -101,6 +101,11 @@ void print(HuffmanTree &HT, int n){
         cout << endl;
     }
 }
+void print2(HuffmanTree &HT,int num){
+    for(int i=2*num-1;i>num;i--){
+        cout<<"cut "<<HT[i].weight<<" into "<<HT[HT[i].left].weight<<" and "<<HT[HT[i].right].weight<<endl;
+    }
+}
 
 int main(){
     int arr[100];
@@ -115,6 +120,6 @@ int main(){
         sum += htree[i].weight;
     }
     cout<<sum<<endl;
-    print(htree,num);
+    print2(htree,num);
     return 0;
 }
